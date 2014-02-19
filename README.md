@@ -73,7 +73,7 @@ ForJournalism mapping session
 Bostock's Let's Make a Map  
 
 ### Data sources ###
-US census 
-Natural Earth 
-OSM 
+US census  
+Natural Earth  
+OSM  
 Wikimedia SVGs  
