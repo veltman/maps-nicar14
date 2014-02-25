@@ -1,79 +1,153 @@
 # Creating maps: principles, mistakes, and potential #
 
+By Noah Veltman (@veltman) and Tom MacWright (@tmcw)
+
 ## Making a map ##
 
-Should you be making a map?
-* What are maps for, anyway? Orienting self, locating one's own place quickly, showing a geographic trend, service journalism for things happening in physical space.
-* Map as interface vs. map as story
-* But pretty much everything happens in physical space. It doesn't all belong on a map.
-* DON'T MAKE POPULATION MAPS.
-* Tradeoffs of different types of map, bar charts - ease of locating, ease of comparing two places, ease of highlighting regional trends, ease of identifying extremes, ease of identifying distribution.  WaPo Senate map as example.
+---
+Why are you making a map?
 
+---
+Everything happens somewhere.
+
+---
+Maps are good for:
+* Telling a story about geography (map as story)
+* Orienting yourself (map as interface)
+---
+DON'T MAKE POPULATION MAPS.
+
+[BREAKING: lots of people live in cities.]
+[Rates > absolute quantities.]
+[Background: pop map]
+---
+Human geography is complicated.
+
+[Are you just mapping a proxy for the real story?]
+[Are you unintentionally conflating multiple things into one?]
+[A geographic pattern can be illuminating to people familiar with the place, misleading to people who aren't]
+[Background: crime map]
+---
+Make a bar chart instead.
+
+[Easier to identify extremes, distribution. Not biased by physical space.]
+[Harder to locate your own place.  Much harder to see geographic trends, if they are real.]
+[Background: WaPo shootings bar chart]
+---
+Write a sentence instead.
+
+[Not everything is best served by a rich visual. If the story is one sentence long, write that sentence instead.]
+---
+
+## Some map design issues ##
+
+You are not a sea captain.
+
+[All maps are opinionated. Embrace it. Geographic fidelity can be a drawback. Think about transit maps: sacrificing some geographic fidelity in favor of readability.]
+[Background: subway map, WaPo senate block chart.]
+---
 Everyone gerrymanders.
-* If your data is grouped, you're skewing the results no matter what level of detail you map it at.  What is the proper atomic unit?  Is the real story state vs. state, urban vs. rural, east vs. west? Should you be using political units, or arbitrary units of equal area?
 
-Making a map doesn't mean making a map James Cook could navigate with.
-* All maps are opinionated. Embrace it. Tell the story you want to tell, mindfully.  Think about transit maps: sacrificing some geographic fidelity in favor of ability to parse the system.
+[If your data is grouped, you're skewing the results no matter what level of detail you map it at.]
+[What is the proper atomic unit?  Is the real story state vs. state, urban vs. rural, east vs. west? Should you be using political units, or arbitrary units of equal area?]
+[Binning]
+---
+Cramming in too much.
 
-Building a map, the basics:
-* Anatomy of a tilemap, advantages and limitations.
-* Non-tilemap alternatives, advantages and limitations.
+[Trying to tell three stories at once with a map means you wind up telling zero.]
+[Don't be afraid of small multiples. They make for better comparisons, and they're especially great for tiny screens.]
+[Also the issue of noise, esp. with default tiles full of labels.  Ruthlessly discard things that don't help the story, or it becomes a stock trading floor, with everything screaming for your attention at once.]
+[Background: that guy from Monty Python's Meaning of Life exploding]
+---
+Forgot about zoom.
 
-Map design issues:
-* Centroid disease - assigning things to center point of a place.  Especially large problem if you have data with mixed precision (some street level, some city level)
-* Explosion at the map marker factory - impenetrable thicket of markers makes a map pretty useless, esp. if they don't scale with zoom.  What is the actual need you're trying to meet with them?  Can you bin them, or exclude some, or only show one subcategory at a time?
-* Projections (not sure how much we should actually talk about this, it seems beaten to death)
-* Not thinking about zoom - if your map is zoomable, every zoom level is a separate feature.  Things should scale and show/hide gracefully based on zoom level. Restrict zoom level to the useful range if zooming out too far or too close would discombobulate.
-* Overcrowded map with defaults - esp. true with base layers full of streets, parks, etc. I'm looking at you, Google Maps API. Lots of noise obscuring your data. Easy solutions include MapBox or Gmaps styling wizard.
-* Overcrowded map with data - Don't expect people to hold a whole map with multiple data dimensions in working memory.  Focus attention, leave things out.
-* Showing giant maps on tiny screens - esp. true with tilemaps, where the same swipe-to-scroll event might get captured by browser, might get captured by map instead.
-* Colors and maps - Color is one of the primary tools for showing data with a map.  But how well people perceive scale, contrast, depends a lot on your colors.  Do you scale continuously or in intervals? Do you show winner-take-all or gradient? How many categorical colors is too many?
+[Standard map behaviors: zoom, pan; don't toy with them]
+[Different zoom levels tell different stories. Consider them all, and restrict them if appropriate. Don't let a user get stranded in the micro- or macroscope]
+[Background: Zoomed out world with markers clustered]
+---
+Explosion at the marker factory.
+
+[Plopping a million markers down on a map is easy and useless.  Consider paring them down, binning them, or categorizing them.]
+---
+One size fits all?
+
+[Remember that half or more of your users will be using tiny screens, stabbing with their thumbs.  And tilemaps will capture scroll events.  Don't make tiny Xs.]
+---
+Colors.
+
+[Color is one of the primary tools for showing data with a map.  But how well people perceive scale, contrast, depends a lot on your colors.  Do you scale continuously or in intervals? Do you show winner-take-all or gradient? How many categorical colors is too many?  Use things like Colorbrewer to help with color ramps.  Don't go color crazy.]
+[Colorblindness: significant problem, especially red/green.]
+[Colors that look vivid and high-contrast on your cinema display might look like crap on someone's Cheap Dell Monitor (TM) or phone.]
 
 ## Geographic data ##
 
-### What does geographic data look like? ###
-* Pretty much everything is a list of latitudes and longitudes. If you speak lat/lng you speak map.
-* Intro to formats: shapefiles, GeoJSON, TopoJSON, KML
-* Touch on OpenStreetMap
+It's all lat/lngs.
 
-### Geographic data issues ###
-* Precision - Large files are large.  Simplification can drop things altogether if you're not careful.
-* CRS - sometimes things don't come in lat/lng.
-* Real-world geography is messy - How many countries are there? Is Greenland part of Denmark? Is Puerto Rico part of the US? Census tracts can include parks, harbors, etc. Is Belgium one country or Flanders+Wallonia? Pakistan election map - how to deal with Kashmir? And boundaries change.
+[If you speak lat/lng you speak map.]
+---
+This is a lat/lng.
 
-## Data to put on a map ##
+[Background: point.]
+---
+This is three lat/lngs.
 
-### Data issues ###
-* Data join problems: name mismatches, sovereignty mismatches. South Korea vs. Korea vs. Republic of Korea vs. S. Korea.  How many different names can you come up with for Hong Kong?  The UN has 4.
-Outlying islands, etc. that skew results.
-* Ignoring confounding variables (like all journalism) - e.g., a crime map where the hotspot has a lot of car theft and violent crime is elsewhere.
-* Geocoding issues: if your geographic data consists of addresses, not unique IDs or lat/lngs, proceed very carefully.
+[Background: polyline.]
+---
+This is four lat/lngs.
 
-## Tipsheet ##
+[Background: colorado]
+---
+Shapefiles, GeoJSON, TopoJSON, KML: aka lists of lat/lngs.
+---
 
-### Tools ###
-QGIS  
-Matt Bloch's Mapshaper  
-ADC4GIS ogr2ogr converter  
-MapBox suite  
-Leaflet  
-Google Maps API  
-D3  
-MapStack  
-CartoDB  
-Kartograph.js  
-OpenStreetMap ecosystem  
-Google Maps API, Geocoder  
-Gmaps styling wizard
+## Geographic data issues ##
 
-### Tutorials ###
-Mapschool  
-MapBox docs  
-ForJournalism mapping session  
-Bostock's Let's Make a Map  
+Geography trivia lightning round:
+---
+How many countries are there?
+UN: 193/206
+ISO: 249
+FIFA: 209
+---
+According to whom?
 
-### Data sources ###
-US census  
-Natural Earth  
-OSM  
-Wikimedia SVGs  
+[Background: Kashmir, Taiwan]
+---
+Is this in Denmark?
+
+[Background: Greenland]
+---
+U-S-A! U-S-A! U-S-A!
+
+[Background: Puerto Rico, Guam, American Samoa, Northern Mariana Islands]
+---
+Some low-density census tracts:
+
+[Background: Golden Gate Park, Boston harbor]
+---
+Boundaries change.
+[Background: side-by-side of congressional districts]
+---
+What is this country called? (Korean flag)
+South Korea
+Korea
+Republic of Korea
+S. Korea
+(in Korean)
+
+[Background: South Korean flag]
+[Data join problems are one of the biggest gotchas trying to make a map in the newsroom.]
+---
+49 ways to spell Cahuenga.
+
+[Cahaunga, Caheinga, Cahenga, Caheunga, Cahienga, Cahlenga, Cahoengia, Cahu, Cahubnga and Cahue]
+[Background: Cahuenga Boulevard street sign]
+[Ref: http://www.latimes.com/news/opinion/la-oe-smith-lapd-spelling-errors,0,4445429.htmlstory#axzz2uGaL4kMp]
+---
+Geocoding
+
+[If your geographic data consists of addresses, not unique IDs or lat/lngs, proceed very carefully.  Hand-entered, unsanitized.]
+[Related: centroid disease: are things that sort into entire state/county being pinned to the exact point in the middle?]
+---
+Questions?
+---
