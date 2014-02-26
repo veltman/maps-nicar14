@@ -35,6 +35,8 @@ Tom MacWright, MapBox (@tmcw)
 [Are you unintentionally conflating multiple things into one?]  
 [A geographic pattern can be illuminating to people familiar with the place, misleading to people who aren't]  
 [Background: crime map]
+[Hate tweets]
+[FLowing Data runs]
 
 ---
 
@@ -154,16 +156,10 @@ FIFA: 209
 
 ---
 
-### Is this in Denmark?
-
-[Background: Greenland]
-
----
-
 ### U-S-A! U-S-A! U-S-A!
 
 [Background: Puerto Rico, Guam, American Samoa, Northern Mariana Islands]
-
+[Also cases like Greenland]
 ---
 
 ### Some low-density census tracts:
@@ -214,26 +210,25 @@ Tom MacWright, MapBox (@tmcw)
 ---
 
 Images:
-South Korean Flag
-Cahuenga Boulevard street sign
+South Korean Flag-
 Boston Harbor tract
 American flag
-Map of Puerto Rico
-Map of Guam
-Map of American Samoa
-Map of Northern Mariana Islands
+Map of Puerto Rico-
+Map of Guam-
+Map of American Samoa-
+Map of Northern Mariana Islands-
 Map of Greenland
-Map of Kashmir
-Map of Taiwan
-Map of point, line, polyline
+Map of Kashmir-
+Map of point, line, polyline-
 Mobile device/thumb
 Population map
-Color-scaled maps
-Small multiples
-Marker explosion
+Color-scaled maps-
+Small multiples-
+Marker explosion-
 [Background: that guy from Monty Python's Meaning of Life exploding]
-Subway map
+-Subway map
 Crime map
-WaPo shootings bar chart
-WaPo senate block map
+-WaPo shootings bar chart
+-WaPo senate block map
 Old/new congressional districts
+-Hate tweets
