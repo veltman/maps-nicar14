@@ -1,6 +1,7 @@
 # Creating maps: principles, mistakes, and potential
 
-By Noah Veltman (@veltman) and Tom MacWright (@tmcw)
+Noah Veltman, WNYC (@veltman)
+Tom MacWright, MapBox (@tmcw)
 
 ## Making a map
 
@@ -102,6 +103,7 @@ By Noah Veltman (@veltman) and Tom MacWright (@tmcw)
 [Color is one of the primary tools for showing data with a map.  But how well people perceive scale, contrast, depends a lot on your colors.  Do you scale continuously or in intervals? Do you show winner-take-all or   gradient? How many categorical colors is too many?  Use things like Colorbrewer to help with color ramps.  Don't go color crazy.]  
 [Colorblindness: significant problem, especially red/green.]  
 [Colors that look vivid and high-contrast on your cinema display might look like crap on someone's Cheap Dell Monitor (TM) or phone.]
+[Can use equal intervals, quantiles, natural breaks/Jenks]
 
 ## Geographic data ##
 
@@ -167,6 +169,7 @@ FIFA: 209
 ### Some low-density census tracts:
 
 [Background: Golden Gate Park, Boston harbor]
+[The more detailed the data, the more susceptible to weird quirks, like a place nobody lives or a prison or a hospital.]
 
 ---
 
@@ -205,4 +208,32 @@ FIFA: 209
 
 ### Questions?
 
+Noah Veltman, WNYC (@veltman)
+Tom MacWright, MapBox (@tmcw)
+
 ---
+
+Images:
+South Korean Flag
+Cahuenga Boulevard street sign
+Boston Harbor tract
+American flag
+Map of Puerto Rico
+Map of Guam
+Map of American Samoa
+Map of Northern Mariana Islands
+Map of Greenland
+Map of Kashmir
+Map of Taiwan
+Map of point, line, polyline
+Mobile device/thumb
+Population map
+Color-scaled maps
+Small multiples
+Marker explosion
+[Background: that guy from Monty Python's Meaning of Life exploding]
+Subway map
+Crime map
+WaPo shootings bar chart
+WaPo senate block map
+Old/new congressional districts
