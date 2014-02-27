@@ -7,7 +7,9 @@ All maps are opinionated. Embrace it. Geographic fidelity can be a drawback. Thi
 The map is a thing, but not THE thing.
 
 Increasing use of micro-maps, inline maps, things that augment and provide context but allow room for other storytelling.
+
 MoJo map/table: https://source.opennews.org/en-US/articles/when-map-shouldnt-be-map/
+
 NYT small multiples drought map
 
 ---
