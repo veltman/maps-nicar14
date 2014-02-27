@@ -10,9 +10,9 @@ The map is a thing, but not THE thing.
 
 Increasing use of micro-maps, inline maps, things that augment and provide context but allow room for other storytelling.
 
-Image: MoJo map/table
+Image: MoJo map/table.
 
-Image: NYT small multiples drought map
+Image: NYT small multiples drought map.
 
 ---
 
@@ -26,8 +26,6 @@ Image: WNYC sledding spots map.
 
 ---
 
-A basemap for everyone.
-
-TileMill.
-
 Image: Oprah, "You get a basemap, you get a basemap!"
+
+TileMill
