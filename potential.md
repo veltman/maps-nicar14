@@ -1,6 +1,6 @@
 Not being a sea captain.
 
-All maps are opinionated. Embrace it. Geographic fidelity can be a drawback. Think about transit maps: sacrificing some geographic fidelity in favor of readability.  Modern tools and browsers are making it easier and easier to create vivid, useful, non-geodetic maps.
+All maps are opinionated. Embrace it. Geographic fidelity can be a drawback. Think about transit maps: sacrificing some geographic fidelity in favor of readability.  Modern tools and browsers are making it easier and easier to create vivid, useful, non-geodetic maps.  WaPo block map.  Dorling cartogram.  Stamen Google bus map.
 
 ---
 
