@@ -20,13 +20,16 @@
 * [shapefile, a Node.js module for converting shapefiles to GeoJSON](https://www.npmjs.org/package/shapefile)
 * [shp2json, another Node.js module for converting shapefiles to GeoJSON](https://github.com/substack/shp2json)
 
-### Tutorials ###
+# Tutorials #
 * [Mapschool, by Tom MacWright](http://mapschool.io/)
 * [ForJournalism mapping session, by Ken Schwencke](http://forjournalism.com/)
 * [Learning Lunch on maps, by Noah Veltman](https://github.com/veltman/learninglunches/tree/master/maps)
 * [Let's Make a Map, by Mike Bostock](http://bost.ocks.org/mike/map/)
+* [Responsive Maps with D3, by Chris Amico](http://eyeseast.github.io/visible-data/2013/08/26/responsive-d3/)
+* [A Leaflet.js tutorial, by Becca Aaronson](https://github.com/brickaa/mapbox-leaflet-demo)
+* [Another Leaflet.js tutorial, by Mike Tigas and Noah Veltman](https://github.com/veltman/hhbaworkshop/blob/master/walkthrough.md)
 
-### Data sources ###
+# Data sources #
 * [US Census Bureau, for detailed data about the US (mostly shapefiles)](http://www.census.gov/geo/maps-data/data/tiger.html)
 * [Natural Earth, for downloads of basic natural/political boundaries for the entire world](http://www.naturalearthdata.com/)
 * [OpenStreetMap, for detailed, mappable data about almost every place in the world](http://www.openstreetmap.org/)
@@ -36,3 +39,8 @@
 * [The TribApps Boundary Service (for Chicago)](http://boundaries.tribapps.com/)
 * [The MinnPost Boundary Service (for Minnesota)](http://boundaries.minnpost.com/)
 * Try your local/state government.  Many of them have GIS sites where you can download detailed files of districts, roads and more.  Try searching for things like "[name of place] shapefile" or "[name of place] gis."
+
+# Other reading #
+
+* [Tom MacWright's Mapmaker's Cheatsheet](https://github.com/tmcw/mapmakers-cheatsheet)
+* [When maps shouldn't be maps, by Matthew Ericson](http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/)
