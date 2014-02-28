@@ -1,3 +1,7 @@
+# Presentation slides
+* [Tom's](http://www.macwright.org/presentations/nicar/#0)
+* [Noah's](https://docs.google.com/presentation/d/1XMn8dSUZ0yG0ShnBgnqCluJU9AjYtyjNTThZErhtROc/pub?start=false&loop=false&delayms=60000#slide=id.p)
+
 # Tools #
 * [QGIS, for using shapefiles, joining data, and lots of other things](http://www.qgis.org/en/site/)
 * [Leaflet, for making slippy maps for the web](http://leafletjs.com/)
